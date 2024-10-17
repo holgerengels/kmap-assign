@@ -32,8 +32,8 @@ Keine Installation erforderlich. Hier gibt es eine komplette Beispielseite [here
 
 ```html
 <script type="module">
-  import {KmapSolvee} from 'https://cdn.jsdelivr.net/npm/kmap-solvee@0.9.5/+esm'
-  window.customElements.define('kmap-solvee', KmapSolvee);
+  import {KmapAssign} from 'https://cdn.jsdelivr.net/npm/kmap-solvee@0.9.5/+esm'
+  window.customElements.define('kmap-solvee', KmapAssign);
 </script>
 
 <kmap-solvee operations="polynomial" solutions="-1,0,1" strategy="polynomial" hints='[

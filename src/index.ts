@@ -1,1 +1,1 @@
-export { KmapSolvee } from './KmapSolvee';
+export { KmapAssign } from './KmapAssign';

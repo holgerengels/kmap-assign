@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <title>Solvee Equation Trainer</title>
+  <title>KMap DnD Assign</title>
   <meta charset="utf-8">
   <style>
     body { background: white; font-family: sans-serif; }
@@ -10,26 +10,22 @@
 </head>
 <body>
 <script type="module">
-  import '../dist/src/kmap-solvee.js';
+  import '../dist/src/kmap-assign.js';
 </script>
 <!--kmap-solvee operations="exponential, exp, null_form">e^x+e^(2x)=e</kmap-solvee-->
-<kmap-solvee operations="polynomial, square" solutions="" strategy="polynomial">(x-1)^2=0</kmap-solvee>
-<kmap-solvee operations="polynomial, square" solutions="" strategy="polynomial">x^2-x=0</kmap-solvee>
-<kmap-solvee operations="polynomial, square" solutions="" strategy="polynomial">x^2+x+1=0</kmap-solvee>
-<kmap-solvee operations="polynomial, square" solutions="sqrt(7), -sqrt(7), -1, 1" strategy="polynomial">x^3+8x^2-2x=0</kmap-solvee>
-<kmap-solvee operations="polynomial, square" solutions="sqrt(7), -sqrt(7), -1, 1" strategy="polynomial">x^4+8x^3-2x^2=0</kmap-solvee>
-<kmap-solvee operations="polynomial, square" solutions="sqrt(7), -sqrt(7), -1, 1" strategy="polynomial">x^5-8x^3-x=0</kmap-solvee>
-<kmap-solvee operations="polynomial, square" strategy="polynomial" solutions="-2,-1,0" hints='[
-      {
-        "match": "(x+2)(x+1)^2x=0",
-        "operation": "expand",
-        "message": "Ausmultiplizieren ist nur selten eine gute Strategie. Hier führt es in eine Sackgasse!"
-      }]'>(x+2)(x+1)^2x=0</kmap-solvee>
-<kmap-solvee operations="polynomial_root" strategy="polynomial" hints='[
-      {
-        "match": "_x^4+_x^2=0",
-        "operation": "substitute_poly",
-        "message": "Kann man mit Substitution lösen, schneller gehts mit x² Ausklammern und dem Satz vom Nullprodukt!"
-      }]'>2x^4-2x^2=0</kmap-solvee>
+<kmap-assign orientation="horizontal" layout="max-content 200px 200px">
+  <div slot="target"><b>Eine Kerze brennt ab</b></div>
+  <div slot="target"><b>Die Lichtintensität im Wasser<br/> nimmt pro m Tiefe um 20 % ab</b></div>
+  <div slot="target"><b>Auf ein Sparkonto werden<br/> jeden Monat 100 € eingezahlt</b></div>
+  <div slot="target"><b>Aufladen eines Akkus</b></div>
+  <div slot="target"><b>Kaffee kühlt ab</b></div>
+  <div slot="target"><b>Verbreitung eines Gerüchts</b></div>
+  <div slot="item">Linearer Zerfall</div>
+  <div slot="item">Exponentieller Zerfall</div>
+  <div slot="item">Lineares Wachstum</div>
+  <div slot="item">Beschränktes Wachstum</div>
+  <div slot="item">Beschränkter Zerfall</div>
+  <div slot="item">Exponentielles Wachstum</div>
+</kmap-assign>
 </body>
 </html>
