@@ -118,7 +118,7 @@ export class KmapAssign extends LitElement {
       let itemAbsoluteTop = getPageY(event);
       item.style.left = itemAbsoluteLeft + containerX + 'px'
       item.style.top = itemAbsoluteTop + containerY + 'px'
-      let elements = this.shadowRoot.elementsFromPoint(itemAbsoluteLeft, itemAbsoluteTop);
+      let elements = this.shadowRoot.elementsFromPoint(itemAbsoluteLeft - window.scrollX, itemAbsoluteTop - window.scrollY);
       elements = elements.filter(e => e.tagName === "DROP");
       const mark = elements.length === 1 ? elements[0] : undefined;
       this._tid = mark ? mark.id : undefined;
@@ -245,9 +245,6 @@ export class KmapAssign extends LitElement {
           box-sizing: border-box;
         }
         :host {
-          font-family: Roboto, sans-serif;
-          -webkit-font-smoothing: antialiased;
-          font-size: 0.875rem;
         }
         .grid {
           display: grid;
